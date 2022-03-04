@@ -28,8 +28,12 @@ lazy val commonSettings = Seq(
 
 lazy val global = project.in(file("."))
   .aggregate(
-    chapter01
+    chapter01,
+    chapter02
   )
 
 lazy val chapter01 = project.in(file("chapter01"))
+  .settings(commonSettings: _*)
+
+lazy val chapter02 = project.in(file("chapter02"))
   .settings(commonSettings: _*)
